@@ -14,6 +14,15 @@ public class User {
 	private String userName;
 	private String userEmail;
 	private long userContact;
+	private String message;
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
 	public long getUserContact() {
 		return userContact;
@@ -50,8 +59,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + ", userContact="
-				+ userContact + ", getUserContact()=" + getUserContact() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+				+ userContact + ", message=" + message + "]";
 	}
 
 }

@@ -23,19 +23,17 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public ResponseEntity<ResponseStructure<UserResponse>> addUser(UserRequest userRequest) {
-	    User user = mapToEntity(userRequest);
-	    user = userRepository.save(user);
-	    UserResponse userResponse = mapToResponse(user);
+		User user = mapToEntity(userRequest);
+		user = userRepository.save(user);
+		UserResponse userResponse = mapToResponse(user);
 
-	    String message = String.format("Thank you for expressing your interest, %s! Our team will reach out to you shortly.", user.getUserName());
+		String message = String.format(
+				"Thank you for expressing your interest, %s! Our team will reach out to you shortly.",
+				user.getUserName());
 
-	    return ResponseEntity
-	            .ok(responseStructure
-	                .setMessage(message)
-	                .setData(userResponse)
-	                .setStatus(HttpStatus.OK.value()));
+		return ResponseEntity
+				.ok(responseStructure.setMessage(message).setData(userResponse).setStatus(HttpStatus.OK.value()));
 	}
-
 
 	private UserResponse mapToResponse(User user) {
 		UserResponse response = new UserResponse();
@@ -43,6 +41,7 @@ public class UserServiceImpl implements UserService {
 		response.setUserName(user.getUserName());
 		response.setUserEmail(user.getUserEmail());
 		response.setUserContact(user.getUserContact());
+		response.setMessage(user.getMessage());
 		return response;
 	}
 
@@ -51,6 +50,7 @@ public class UserServiceImpl implements UserService {
 		user.setUserName(userRequest.getUserName());
 		user.setUserContact(userRequest.getUserContact());
 		user.setUserEmail(userRequest.getUserEmail());
+		user.setMessage(userRequest.getMessage());
 		return user;
 	}
 
