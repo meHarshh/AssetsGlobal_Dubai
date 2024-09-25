@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import com.asg.dto.UserRequest;
 import com.asg.dto.UserResponse;
 import com.asg.entity.User;
@@ -53,5 +52,4 @@ public class UserServiceImpl implements UserService {
 		user.setMessage(userRequest.getMessage());
 		return user;
 	}
-
 }

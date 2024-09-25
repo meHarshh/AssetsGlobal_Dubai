@@ -9,4 +9,4 @@ public interface SubscriberService {
 
 	ResponseEntity<ResponseStructure<Subscriber>> addSubscriber(Subscriber subscriber);
 
-}
+}	
