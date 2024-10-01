@@ -10,4 +10,8 @@ public class AssetsGlobalDubaiApplication {
 		SpringApplication.run(AssetsGlobalDubaiApplication.class, args);
 	}
 
+	
+	
+	
+	
 }
