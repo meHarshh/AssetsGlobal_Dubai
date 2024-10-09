@@ -12,7 +12,7 @@ import com.asg.dto.UserResponse;
 import com.asg.service.UserService;
 import com.asg.util.ResponseStructure;
 
-@CrossOrigin(value = "https://sattvalumina.assetsglobal.in/", allowCredentials = "true")
+@CrossOrigin(value = "https://assetsglobal.in/", allowCredentials = "true")
 @RestController
 public class UserController {
 

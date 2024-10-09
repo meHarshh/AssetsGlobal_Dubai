@@ -11,7 +11,7 @@ import com.asg.entity.Subscriber;
 import com.asg.service.SubscriberService;
 import com.asg.util.ResponseStructure;
 
-@CrossOrigin(value = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(value = "https://assetsglobal.in/", allowCredentials = "true")
 @RestController
 public class SubscriberController {
 
